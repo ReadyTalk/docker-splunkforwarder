@@ -8,4 +8,11 @@ Simple splunk forwarder utilizing runtime templates (reefer) to configure the Sp
 * SPLUNK_INDEX - Splunk index to send log entries to.
 
 ## Example run:
-docker run -d -e SPLUNK_SERVER=splunk.localhost -e SPLUNK_SERVER_PORT=9500 -e 'SPLUNK_LOGFILE_PATTERN=/var/log/*.log' -e SPLUNK_INDEX=prod_idx readytalk/splunkforwarder
+```
+docker run -d \
+  -e SPLUNK_SERVER=splunk.local.com \
+  -e SPLUNK_SERVER_PORT=9500 \
+  -e 'SPLUNK_LOGFILE_PATTERN=/var/log/*.log' \
+  -e SPLUNK_INDEX=prod_idx \
+  readytalk/splunkforwarder
+```
